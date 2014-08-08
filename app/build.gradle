@@ -31,4 +31,7 @@ dependencies {
     compile 'com.yammer.metrics:metrics-core:2.2.0'
     compile 'com.google.code.findbugs:jsr305:2.0.2'
     compile 'io.netty:netty-all:4.1.0.Beta1'
+    compile 'org.apache.httpcomponents:httpclient:4.3.5'
+    compile 'commons-configuration:commons-configuration:1.7'
+    compile 'org.apache.httpcomponents:httpasyncclient:4.0.2'
 }

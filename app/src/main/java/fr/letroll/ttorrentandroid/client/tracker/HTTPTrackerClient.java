@@ -15,26 +15,6 @@
  */
 package fr.letroll.ttorrentandroid.client.tracker;
 
-import fr.letroll.ttorrentandroid.bcodec.BEValue;
-import fr.letroll.ttorrentandroid.bcodec.InvalidBEncodingException;
-import fr.letroll.ttorrentandroid.bcodec.StreamBDecoder;
-import fr.letroll.ttorrentandroid.client.ClientEnvironment;
-import fr.letroll.ttorrentandroid.client.TorrentMetadataProvider;
-import fr.letroll.ttorrentandroid.common.protocol.TrackerMessage;
-import fr.letroll.ttorrentandroid.common.protocol.TrackerMessage.AnnounceRequestMessage;
-import fr.letroll.ttorrentandroid.common.protocol.http.HTTPAnnounceRequestMessage;
-import fr.letroll.ttorrentandroid.common.protocol.http.HTTPAnnounceResponseMessage;
-import fr.letroll.ttorrentandroid.common.protocol.http.HTTPTrackerErrorMessage;
-import fr.letroll.ttorrentandroid.common.protocol.http.HTTPTrackerMessage;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.InetSocketAddress;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.Map;
-import javax.annotation.CheckForNull;
-import javax.annotation.CheckForSigned;
-import javax.annotation.Nonnull;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -47,6 +27,29 @@ import org.apache.http.impl.nio.client.HttpAsyncClients;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.InetSocketAddress;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.Map;
+
+import javax.annotation.CheckForNull;
+import javax.annotation.CheckForSigned;
+import javax.annotation.Nonnull;
+
+import fr.letroll.ttorrentandroid.bcodec.BEValue;
+import fr.letroll.ttorrentandroid.bcodec.InvalidBEncodingException;
+import fr.letroll.ttorrentandroid.bcodec.StreamBDecoder;
+import fr.letroll.ttorrentandroid.client.ClientEnvironment;
+import fr.letroll.ttorrentandroid.client.TorrentMetadataProvider;
+import fr.letroll.ttorrentandroid.common.protocol.TrackerMessage;
+import fr.letroll.ttorrentandroid.common.protocol.TrackerMessage.AnnounceRequestMessage;
+import fr.letroll.ttorrentandroid.common.protocol.http.HTTPAnnounceRequestMessage;
+import fr.letroll.ttorrentandroid.common.protocol.http.HTTPAnnounceResponseMessage;
+import fr.letroll.ttorrentandroid.common.protocol.http.HTTPTrackerErrorMessage;
+import fr.letroll.ttorrentandroid.common.protocol.http.HTTPTrackerMessage;
 
 /**
  * Announcer for HTTP trackers.
